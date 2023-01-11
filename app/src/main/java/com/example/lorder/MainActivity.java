@@ -2,6 +2,7 @@ package com.example.lorder;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -29,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         //replace the main activity with home fragment
         //getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
-
         //in case user selects any of the fragments
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()){
                     case R.id.home:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameLayout, homeFragment).commit();
                         return true;
                     case R.id.favourites:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, favouriteFragment).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameLayout, favouriteFragment).commit();
                         return true;
                     case R.id.order:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, orderFragment).commit();
+                        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.frameLayout, orderFragment).commit();
                         return true;
                 }
                 return false;

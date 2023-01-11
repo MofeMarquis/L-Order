@@ -5,7 +5,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,38 +18,64 @@ import java.util.ArrayList;
 
 import Adapter.FoodAdapter;
 import FoodModel.FoodModel;
+import HomeViewModel.FoodViewModel;
 
 
 public class HomeFragment extends Fragment {
+    private FoodViewModel viewModel;
     private FoodAdapter foodAdapter;
     private RecyclerView foodRecyclerView;
     private static ArrayList<FoodModel> foodModels = new ArrayList<>();
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        viewModel = new FoodViewModel();
+        viewModel.setFoodItems(setFoodData());
+        }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         foodRecyclerView = view.findViewById(R.id.homeRecyclerView);
         foodAdapter = new FoodAdapter(getActivity());
         foodRecyclerView.setAdapter(foodAdapter);
         foodRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-
-        setFoodData();
-
         foodAdapter.setFoodModels(foodModels);
+        foodAdapter.notifyDataSetChanged();
 
-
+        return view;
     }
 
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if (savedInstanceState != null){
+            viewModel.setFoodItems(savedInstanceState.getParcelable("FOOD_ITEMS_KEY"));
+        }
+    }
+
+    //    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//
+//        foodRecyclerView = view.findViewById(R.id.homeRecyclerView);
+//        foodAdapter = new FoodAdapter(getActivity());
+//        foodRecyclerView.setAdapter(foodAdapter);
+//        foodRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+//
+//        setFoodData();
+//
+//        foodAdapter.setFoodModels(foodModels);
+//
+//
+//    }
+
     //ADD FOOD DATA TO ARRAY
-    public void setFoodData(){
+    public ArrayList<FoodModel> setFoodData(){
         foodModels.add(new FoodModel("Carrot Cake", "$12.25", "dessert"));
         foodModels.add(new FoodModel("Apricot Cake", "$12.25", "dessert"));
         foodModels.add(new FoodModel("Coconut Cake", "$12.25", "dessert"));
@@ -58,5 +83,7 @@ public class HomeFragment extends Fragment {
         foodModels.add(new FoodModel("Pound Cake", "$12.25", "dessert"));
         foodModels.add(new FoodModel("Fruit Cake", "$12.25", "dessert"));
         foodModels.add(new FoodModel("Lemon Cake", "$12.25", "dessert"));
+
+        return foodModels;
     }
 }

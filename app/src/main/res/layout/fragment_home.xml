@@ -29,6 +29,27 @@
 
       </androidx.recyclerview.widget.RecyclerView>
 
+      <TextView
+          android:id="@+id/drinksText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Drinks"
+          android:textSize="25sp"
+          android:layout_margin="10dp"
+          android:layout_below="@+id/homeRecyclerView">
+
+      </TextView>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/drinksRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/drinksText"
+          android:layout_margin="8dp">
+
+      </androidx.recyclerview.widget.RecyclerView>
+
+
    </RelativeLayout>
 
 

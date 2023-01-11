@@ -22,7 +22,7 @@ import FoodModel.FoodModel;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
-    ArrayList<FoodModel> foodModels =  new ArrayList<>();
+    static ArrayList<FoodModel> foodModels =  new ArrayList<>();
     Context myContext;
    static final String FOODKEY = "food";
 
@@ -47,8 +47,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), FoodItemActivity.class);
-                intent.putExtra(FOODKEY, (Parcelable) foodModels.get(holder.getAdapterPosition()));
-                view.getContext().startActivity(intent);
+                myContext.startActivity(intent);
 
             }
         });

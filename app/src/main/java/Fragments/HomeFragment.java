@@ -24,7 +24,7 @@ import FoodModel.FoodModel;
 public class HomeFragment extends Fragment {
     private FoodAdapter foodAdapter;
     private RecyclerView foodRecyclerView;
-    private ArrayList<FoodModel> foodModels = new ArrayList<>();
+    private static ArrayList<FoodModel> foodModels = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

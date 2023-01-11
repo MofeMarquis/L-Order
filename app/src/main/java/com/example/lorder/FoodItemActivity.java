@@ -19,5 +19,8 @@ public class FoodItemActivity extends AppCompatActivity {
 
         foodImageActivity = findViewById(R.id.foodImageActivity);
         foodDescription =  findViewById(R.id.foodDescription);
+
+        foodImageActivity = findViewById(R.id.foodImageActivity);
+        foodDescription = findViewById(R.id.foodDescription);
     }
 }

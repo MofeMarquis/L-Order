@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
 
     }
 
-    //ADD FOOD DATA TO ARRRAY
+    //ADD FOOD DATA TO ARRAY
     public void setFoodData(){
         foodModels.add(new FoodModel("Carrot Cake", "$12.25", "dessert"));
         foodModels.add(new FoodModel("Apricot Cake", "$12.25", "dessert"));

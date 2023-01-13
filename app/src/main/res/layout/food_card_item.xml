@@ -13,13 +13,16 @@
         android:layout_margin="8dp">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageButton
                 android:layout_width="300dp"
-                android:layout_height="130dp"
-                android:id="@+id/foodImage">
+                android:layout_height="125dp"
+                android:id="@+id/foodImage"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
 
             </ImageButton>
 
@@ -37,10 +40,10 @@
             <View
                 android:id="@+id/view"
                 android:layout_width="0.8dp"
-                android:layout_height="22dp"
+                android:layout_height="17dp"
                 android:layout_below="@+id/foodImage"
-                android:layout_marginTop="8dp"
-                android:layout_toRightOf="@+id/foodName"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@+id/foodName"
                 android:background="@color/black">
 
             </View>

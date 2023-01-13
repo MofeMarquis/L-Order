@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.lorder.FoodItemActivity;
 import com.example.lorder.R;
 
@@ -42,6 +43,11 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         holder.foodName.setText(foodModels.get(position).getFoodName());
         holder.foodPrice.setText(foodModels.get(position).getFoodPrice());
         holder.foodCategory.setText(foodModels.get(position).getCategory());
+
+       Glide.with(myContext)
+                       .asBitmap()
+                               .load(foodModels.get(position).getFoodImageUrl())
+                                       .into(holder.foodImage);
 
         holder.foodImage.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,14 +6,15 @@ import android.os.Parcelable;
 public class FoodModel implements Parcelable {
     private String foodName;
     private String foodPrice;
-    //private String foodImageUrl;
+    private String foodImageUrl;
     private String category;
 
 
-    public FoodModel(String foodName, String foodPrice, String category) {
+    public FoodModel(String foodName, String foodPrice, String category, String foodImageUrl) {
         this.foodName = foodName;
         this.foodPrice = foodPrice;
         this.category = category;
+        this.foodImageUrl = foodImageUrl;
     }
 
     public String getFoodName() {
@@ -32,13 +33,13 @@ public class FoodModel implements Parcelable {
         this.foodPrice = foodPrice;
     }
 
-//    public String getFoodImageUrl() {
-//        return foodImageUrl;
-//    }
+    public String getFoodImageUrl() {
+        return foodImageUrl;
+    }
 
-//    public void setFoodImageUrl(String foodImageUrl) {
-//        this.foodImageUrl = foodImageUrl;
-//    }
+    public void setFoodImageUrl(String foodImageUrl) {
+        this.foodImageUrl = foodImageUrl;
+    }
 
 
     public FoodModel(String foodName) {

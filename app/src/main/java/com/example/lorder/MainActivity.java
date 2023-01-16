@@ -22,16 +22,6 @@ public class MainActivity extends AppCompatActivity {
     OrderFragment orderFragment = new OrderFragment();
 
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        int count = getSupportFragmentManager().getBackStackEntryCount();
-        if(count ==  0){
-            super.onBackPressed();
-        }else{
-            getSupportFragmentManager().popBackStack();
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

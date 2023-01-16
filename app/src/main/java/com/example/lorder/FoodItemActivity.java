@@ -9,7 +9,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
+
 import FoodModel.FoodModel;
+import Utils.Utils;
 
 public class FoodItemActivity extends AppCompatActivity {
 
@@ -28,6 +31,16 @@ public class FoodItemActivity extends AppCompatActivity {
         initViews();
 
 
+        Intent intent = getIntent();
+        if(null != intent){
+            int foodId = intent.getIntExtra(FOOD_ID_KEY, 0);
+            if(foodId != 0){
+                FoodModel incomingFood = Utils.getInstance().getFoodById(foodId);
+                if(null != incomingFood){
+                    setData(incomingFood);
+                }
+            }
+        }
 
 
 

@@ -52,4 +52,13 @@ public class Utils {
         return allFavouriteList;
     }
 
+    public FoodModel getFoodById(int id){
+        for(FoodModel foodModel : allFoodsList){
+            if(foodModel.getId() == id){
+                return foodModel;
+            }
+        }
+        return null;
+    }
+
 }

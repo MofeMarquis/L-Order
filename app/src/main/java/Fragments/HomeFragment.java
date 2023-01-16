@@ -1,5 +1,7 @@
 package Fragments;
 
+import static com.example.lorder.FoodItemActivity.FOOD_ID_KEY;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -56,7 +58,7 @@ public class HomeFragment extends Fragment {
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
         if (savedInstanceState != null){
-            viewModel.setFoodItems(savedInstanceState.getParcelable("FOOD_ITEMS_KEY"));
+            viewModel.setFoodItems(savedInstanceState.getParcelable(FOOD_ID_KEY));
         }
     }
 

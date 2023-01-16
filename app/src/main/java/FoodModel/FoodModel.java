@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class FoodModel implements Parcelable {
+    private int id;
     private String foodName;
     private String foodPrice;
     private String foodImageUrl;
@@ -15,12 +16,17 @@ public class FoodModel implements Parcelable {
     public FoodModel() {
     }
 
-    public FoodModel(String foodName, String foodPrice, String category, String foodImageUrl, String foodDescription) {
+    public FoodModel(int Id, String foodName, String foodPrice, String category, String foodImageUrl, String foodDescription) {
+        this.id = id;
         this.foodName = foodName;
         this.foodPrice = foodPrice;
         this.category = category;
         this.foodImageUrl = foodImageUrl;
         this.foodDescription = foodDescription;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getFoodName() {
@@ -54,6 +60,8 @@ public class FoodModel implements Parcelable {
     public void setFoodDescription(String foodDescription) {
         this.foodDescription = foodDescription;
     }
+
+
 
     public FoodModel(String foodName) {
         this.foodName = foodName;

@@ -1,5 +1,7 @@
 package Adapter;
 
+import static com.example.lorder.FoodItemActivity.FOOD_ID_KEY;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Parcelable;
@@ -53,6 +55,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), FoodItemActivity.class);
+                intent.putExtra(FOOD_ID_KEY, foodModels.get(holder.getAdapterPosition()).getId());
                 myContext.startActivity(intent);
 
             }

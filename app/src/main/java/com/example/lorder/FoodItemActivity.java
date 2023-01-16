@@ -2,6 +2,7 @@ package com.example.lorder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,8 +13,10 @@ import FoodModel.FoodModel;
 
 public class FoodItemActivity extends AppCompatActivity {
 
+    private FoodModel foodModel;
     private ImageView foodImageActivity;
     private TextView foodDescription, foodName, foodCategory, foodPrice;
+    public static final String FOOD_ID_KEY = "foodItem";
 
 
     @Override
@@ -24,10 +27,8 @@ public class FoodItemActivity extends AppCompatActivity {
         //calling the initViews method
         initViews();
 
-        FoodModel foodModels = new FoodModel("Sponge Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/victoria-sponge-cake-coffee-88699339.jpg", "A decadent soft and moist vanilla flavoured cake, made from very simple fresh and local ingredients." +
-                "The soft buttery and sweet cake covered with a thick layer of strawberry frosting and strawberry filling that would" +
-                " linger in your mouth after a bite");
-        setData(foodModels);
+
+
 
 
     }

@@ -7,20 +7,61 @@
     tools:context=".FoodItemActivity">
 
     <ImageView
+        android:id="@+id/foodImageActivity"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:id="@+id/foodImageActivity">
+        android:layout_height="250dp">
 
     </ImageView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CARROT"
-        android:textSize="20sp"
         android:layout_below="@+id/foodImageActivity"
-        android:id="@+id/foodDescription">
+        android:text="Food Category"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/foodCategoryActivity">
 
     </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodCategoryActivity"
+        android:text="Food Name"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:id="@+id/foodNameActivity">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/foodPriceActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodNameActivity"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="foodPrice"
+        android:textSize="15sp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodPriceActivity"
+        android:layout_marginStart="10dp"
+        android:text="Description"
+        android:textSize="20sp"
+        android:layout_marginTop="13sp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/foodDescriptionActivity">
+
+    </TextView>
+
+
 
 </RelativeLayout>

@@ -77,14 +77,14 @@ public class HomeFragment extends Fragment {
 
     //ADD FOOD DATA TO ARRAY
     public ArrayList<FoodModel> setFoodData(){
-        foodModels.add(new FoodModel("Carrot Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/z/slice-carrot-cake-frosting-white-background-120780610.jpg"));
-        foodModels.add(new FoodModel("Apricot Cake", "$12.25", "dessert","https://thumbs.dreamstime.com/b/apricot-cake-dessert-plate-31402226.jpg"));
-        foodModels.add(new FoodModel("Coconut Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/coconut-cake-28982904.jpg\n"));
-        foodModels.add(new FoodModel("Sponge Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/victoria-sponge-cake-coffee-88699339.jpg"));
-        foodModels.add(new FoodModel("Chocolate Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/chocolate-cake-rich-milk-strawberry-topping-55467895.jpg"));
-        foodModels.add(new FoodModel("Fruit Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/christmas-fruit-cake-27768707.jpg"));
-        foodModels.add(new FoodModel("Lemon Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/lemon-yogurt-loaf-cake-sliced-plate-creative-wooden-background-your-design-68075917.jpg"));
-        foodModels.add(new FoodModel("Red Velvet", "$12.25", "dessert", "https://thumbs.dreamstime.com/z/cake-red-velvet-white-cream-wooden-table-close-up-space-to-write-81832896.jpg"));
+        foodModels.add(new FoodModel("Carrot Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/z/slice-carrot-cake-frosting-white-background-120780610.jpg", "carrot description"));
+        foodModels.add(new FoodModel("Apricot Cake", "$12.25", "dessert","https://thumbs.dreamstime.com/b/apricot-cake-dessert-plate-31402226.jpg", "apricot description"));
+        foodModels.add(new FoodModel("Coconut Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/coconut-cake-28982904.jpg", "coconut description"));
+        foodModels.add(new FoodModel("Sponge Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/victoria-sponge-cake-coffee-88699339.jpg", "sponge description"));
+        foodModels.add(new FoodModel("Chocolate Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/chocolate-cake-rich-milk-strawberry-topping-55467895.jpg", "choco description"));
+        foodModels.add(new FoodModel("Fruit Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/christmas-fruit-cake-27768707.jpg", "fruit description"));
+        foodModels.add(new FoodModel("Lemon Cake", "$12.25", "dessert", "https://thumbs.dreamstime.com/b/lemon-yogurt-loaf-cake-sliced-plate-creative-wooden-background-your-design-68075917.jpg", "lemon description"));
+        foodModels.add(new FoodModel("Red Velvet", "$12.25", "dessert", "https://thumbs.dreamstime.com/z/cake-red-velvet-white-cream-wooden-table-close-up-space-to-write-81832896.jpg", "red description"));
         return foodModels;
     }
 }

@@ -8,13 +8,19 @@ public class FoodModel implements Parcelable {
     private String foodPrice;
     private String foodImageUrl;
     private String category;
+    private String foodDescription;
 
 
-    public FoodModel(String foodName, String foodPrice, String category, String foodImageUrl) {
+
+    public FoodModel() {
+    }
+
+    public FoodModel(String foodName, String foodPrice, String category, String foodImageUrl, String foodDescription) {
         this.foodName = foodName;
         this.foodPrice = foodPrice;
         this.category = category;
         this.foodImageUrl = foodImageUrl;
+        this.foodDescription = foodDescription;
     }
 
     public String getFoodName() {
@@ -41,6 +47,13 @@ public class FoodModel implements Parcelable {
         this.foodImageUrl = foodImageUrl;
     }
 
+    public String getFoodDescription() {
+        return foodDescription;
+    }
+
+    public void setFoodDescription(String foodDescription) {
+        this.foodDescription = foodDescription;
+    }
 
     public FoodModel(String foodName) {
         this.foodName = foodName;
